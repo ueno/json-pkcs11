@@ -17,10 +17,16 @@ class Type:
     def resolve(self):
         raise NotImplementedError
 
+    def resolve_ffi_type(self):
+        raise NotImplementedError
+
 class Typedef(Type):
     def resolve(self):
         return self.el.get("name")
 
+    def resolve_ffi_type(self):
+        return self.types[self.el.get("type")].resolve_ffi_type()
+    
 class PointerType(Type):
     def resolve(self):
         alias = self.aliases.get(self.el.get('id'))
@@ -29,9 +35,18 @@ class PointerType(Type):
         else:
             return f"{self.types[self.el.get('type')].resolve()} *"
 
+    def resolve_ffi_type(self):
+        return "pointer"
+
 class FundamentalType(Type):
     def resolve(self):
         return self.el.get("name")
+
+    def resolve_ffi_type(self):
+        if self.el.get("size") == "8":
+            return "uchar"
+        elif self.el.get("size") == "64":
+            return "ulong"
 
 class CvQualifiedType(Type):
     def resolve(self):
@@ -77,7 +92,8 @@ class Function(Type):
         for arg in self.el.iter("Argument"):
             obj["arguments"].append({
                 "type": self.types[arg.get("type")].resolve(),
-                "name": arg.get("name")
+                "name": arg.get("name"),
+                "ffi-type": self.types[arg.get("type")].resolve_ffi_type(),
             })
         return obj
     

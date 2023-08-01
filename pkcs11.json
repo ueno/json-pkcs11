@@ -5,7 +5,8 @@
     "arguments": [
       {
         "type": "CK_VOID_PTR",
-        "name": "init_args"
+        "name": "init_args",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -15,7 +16,8 @@
     "arguments": [
       {
         "type": "CK_VOID_PTR",
-        "name": "pReserved"
+        "name": "pReserved",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -25,7 +27,8 @@
     "arguments": [
       {
         "type": "CK_INFO_PTR",
-        "name": "info"
+        "name": "info",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -35,7 +38,8 @@
     "arguments": [
       {
         "type": "CK_FUNCTION_LIST_PTR_PTR",
-        "name": "function_list"
+        "name": "function_list",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -45,15 +49,18 @@
     "arguments": [
       {
         "type": "unsigned char",
-        "name": "token_present"
+        "name": "token_present",
+        "ffi-type": "uchar"
       },
       {
         "type": "CK_SLOT_ID_PTR",
-        "name": "slot_list"
+        "name": "slot_list",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "ulCount"
+        "name": "ulCount",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -63,11 +70,13 @@
     "arguments": [
       {
         "type": "CK_SLOT_ID",
-        "name": "slotID"
+        "name": "slotID",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_SLOT_INFO_PTR",
-        "name": "info"
+        "name": "info",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -77,11 +86,13 @@
     "arguments": [
       {
         "type": "CK_SLOT_ID",
-        "name": "slotID"
+        "name": "slotID",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_TOKEN_INFO_PTR",
-        "name": "info"
+        "name": "info",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -91,15 +102,18 @@
     "arguments": [
       {
         "type": "CK_FLAGS",
-        "name": "flags"
+        "name": "flags",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_SLOT_ID_PTR",
-        "name": "slot"
+        "name": "slot",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pReserved"
+        "name": "pReserved",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -109,15 +123,18 @@
     "arguments": [
       {
         "type": "CK_SLOT_ID",
-        "name": "slotID"
+        "name": "slotID",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_TYPE_PTR",
-        "name": "mechanism_list"
+        "name": "mechanism_list",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "ulCount"
+        "name": "ulCount",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -127,15 +144,18 @@
     "arguments": [
       {
         "type": "CK_SLOT_ID",
-        "name": "slotID"
+        "name": "slotID",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_TYPE",
-        "name": "type"
+        "name": "type",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_INFO_PTR",
-        "name": "info"
+        "name": "info",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -145,19 +165,23 @@
     "arguments": [
       {
         "type": "CK_SLOT_ID",
-        "name": "slotID"
+        "name": "slotID",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "pin"
+        "name": "pin",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "pin_len"
+        "name": "pin_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "label"
+        "name": "label",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -167,15 +191,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "pin"
+        "name": "pin",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "pin_len"
+        "name": "pin_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -185,23 +212,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "old_pin"
+        "name": "old_pin",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "old_len"
+        "name": "old_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "new_pin"
+        "name": "new_pin",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "new_len"
+        "name": "new_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -211,23 +243,28 @@
     "arguments": [
       {
         "type": "CK_SLOT_ID",
-        "name": "slotID"
+        "name": "slotID",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_FLAGS",
-        "name": "flags"
+        "name": "flags",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "application"
+        "name": "application",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_NOTIFY",
-        "name": "notify"
+        "name": "notify",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_SESSION_HANDLE_PTR",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -237,7 +274,8 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -247,7 +285,8 @@
     "arguments": [
       {
         "type": "CK_SLOT_ID",
-        "name": "slotID"
+        "name": "slotID",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -257,11 +296,13 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_SESSION_INFO_PTR",
-        "name": "info"
+        "name": "info",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -271,15 +312,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "operation_state"
+        "name": "operation_state",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "operation_state_len"
+        "name": "operation_state_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -289,23 +333,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "operation_state"
+        "name": "operation_state",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "operation_state_len"
+        "name": "operation_state_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "encryption_key"
+        "name": "encryption_key",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "authentication_key"
+        "name": "authentication_key",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -315,19 +364,23 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_USER_TYPE",
-        "name": "user_type"
+        "name": "user_type",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "pin"
+        "name": "pin",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "pin_len"
+        "name": "pin_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -337,7 +390,8 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -347,19 +401,23 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_ATTRIBUTE_PTR",
-        "name": "templ"
+        "name": "templ",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulCount"
+        "name": "ulCount",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE_PTR",
-        "name": "object"
+        "name": "object",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -369,23 +427,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "object"
+        "name": "object",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_ATTRIBUTE_PTR",
-        "name": "templ"
+        "name": "templ",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulCount"
+        "name": "ulCount",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE_PTR",
-        "name": "new_object"
+        "name": "new_object",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -395,11 +458,13 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "object"
+        "name": "object",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -409,15 +474,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "object"
+        "name": "object",
+        "ffi-type": "ulong"
       },
       {
         "type": "long unsigned int *",
-        "name": "size"
+        "name": "size",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -427,19 +495,23 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "object"
+        "name": "object",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_ATTRIBUTE_PTR",
-        "name": "templ"
+        "name": "templ",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulCount"
+        "name": "ulCount",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -449,19 +521,23 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "object"
+        "name": "object",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_ATTRIBUTE_PTR",
-        "name": "templ"
+        "name": "templ",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulCount"
+        "name": "ulCount",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -471,15 +547,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_ATTRIBUTE_PTR",
-        "name": "templ"
+        "name": "templ",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulCount"
+        "name": "ulCount",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -489,19 +568,23 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE_PTR",
-        "name": "object"
+        "name": "object",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "max_object_count"
+        "name": "max_object_count",
+        "ffi-type": "ulong"
       },
       {
         "type": "long unsigned int *",
-        "name": "object_count"
+        "name": "object_count",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -511,7 +594,8 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -521,15 +605,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -539,23 +626,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "data"
+        "name": "data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "data_len"
+        "name": "data_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "encrypted_data"
+        "name": "encrypted_data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "encrypted_data_len"
+        "name": "encrypted_data_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -565,23 +657,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "part"
+        "name": "part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "part_len"
+        "name": "part_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "encrypted_part"
+        "name": "encrypted_part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "encrypted_part_len"
+        "name": "encrypted_part_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -591,15 +688,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "last_encrypted_part"
+        "name": "last_encrypted_part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "last_encrypted_part_len"
+        "name": "last_encrypted_part_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -609,15 +709,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -627,23 +730,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "encrypted_data"
+        "name": "encrypted_data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "encrypted_data_len"
+        "name": "encrypted_data_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "data"
+        "name": "data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "data_len"
+        "name": "data_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -653,23 +761,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "encrypted_part"
+        "name": "encrypted_part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "encrypted_part_len"
+        "name": "encrypted_part_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "part"
+        "name": "part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "part_len"
+        "name": "part_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -679,15 +792,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "last_part"
+        "name": "last_part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "last_part_len"
+        "name": "last_part_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -697,11 +813,13 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -711,23 +829,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "data"
+        "name": "data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "data_len"
+        "name": "data_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "digest"
+        "name": "digest",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "digest_len"
+        "name": "digest_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -737,15 +860,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "part"
+        "name": "part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "part_len"
+        "name": "part_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -755,11 +881,13 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -769,15 +897,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "digest"
+        "name": "digest",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "digest_len"
+        "name": "digest_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -787,15 +918,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -805,23 +939,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "data"
+        "name": "data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "data_len"
+        "name": "data_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "signature"
+        "name": "signature",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "signature_len"
+        "name": "signature_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -831,15 +970,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "part"
+        "name": "part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "part_len"
+        "name": "part_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -849,15 +991,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "signature"
+        "name": "signature",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "signature_len"
+        "name": "signature_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -867,15 +1012,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -885,23 +1033,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "data"
+        "name": "data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "data_len"
+        "name": "data_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "signature"
+        "name": "signature",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "signature_len"
+        "name": "signature_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -911,15 +1064,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -929,23 +1085,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "data"
+        "name": "data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "data_len"
+        "name": "data_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "signature"
+        "name": "signature",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "signature_len"
+        "name": "signature_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -955,15 +1116,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "part"
+        "name": "part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "part_len"
+        "name": "part_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -973,15 +1137,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "signature"
+        "name": "signature",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "signature_len"
+        "name": "signature_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -991,15 +1158,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1009,23 +1179,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "signature"
+        "name": "signature",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "signature_len"
+        "name": "signature_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "data"
+        "name": "data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "data_len"
+        "name": "data_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1035,23 +1210,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "part"
+        "name": "part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "part_len"
+        "name": "part_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "encrypted_part"
+        "name": "encrypted_part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "encrypted_part_len"
+        "name": "encrypted_part_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1061,23 +1241,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "encrypted_part"
+        "name": "encrypted_part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "encrypted_part_len"
+        "name": "encrypted_part_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "part"
+        "name": "part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "part_len"
+        "name": "part_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1087,23 +1272,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "part"
+        "name": "part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "part_len"
+        "name": "part_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "encrypted_part"
+        "name": "encrypted_part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "encrypted_part_len"
+        "name": "encrypted_part_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1113,23 +1303,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "encrypted_part"
+        "name": "encrypted_part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "encrypted_part_len"
+        "name": "encrypted_part_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "part"
+        "name": "part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "part_len"
+        "name": "part_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1139,23 +1334,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_ATTRIBUTE_PTR",
-        "name": "templ"
+        "name": "templ",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulCount"
+        "name": "ulCount",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE_PTR",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1165,35 +1365,43 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_ATTRIBUTE_PTR",
-        "name": "public_key_template"
+        "name": "public_key_template",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "public_key_attribute_count"
+        "name": "public_key_attribute_count",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_ATTRIBUTE_PTR",
-        "name": "private_key_template"
+        "name": "private_key_template",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "private_key_attribute_count"
+        "name": "private_key_attribute_count",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE_PTR",
-        "name": "public_key"
+        "name": "public_key",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE_PTR",
-        "name": "private_key"
+        "name": "private_key",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1203,27 +1411,33 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "wrapping_key"
+        "name": "wrapping_key",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "wrapped_key"
+        "name": "wrapped_key",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "wrapped_key_len"
+        "name": "wrapped_key_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1233,35 +1447,43 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "unwrapping_key"
+        "name": "unwrapping_key",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "wrapped_key"
+        "name": "wrapped_key",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "wrapped_key_len"
+        "name": "wrapped_key_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_ATTRIBUTE_PTR",
-        "name": "templ"
+        "name": "templ",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "attribute_count"
+        "name": "attribute_count",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE_PTR",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1271,27 +1493,33 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "base_key"
+        "name": "base_key",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_ATTRIBUTE_PTR",
-        "name": "templ"
+        "name": "templ",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "attribute_count"
+        "name": "attribute_count",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_OBJECT_HANDLE_PTR",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1301,15 +1529,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "seed"
+        "name": "seed",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "seed_len"
+        "name": "seed_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1319,15 +1550,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "random_data"
+        "name": "random_data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "random_len"
+        "name": "random_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1337,7 +1571,8 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1347,7 +1582,8 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1357,11 +1593,13 @@
     "arguments": [
       {
         "type": "CK_INTERFACE_PTR",
-        "name": "interfaces_list"
+        "name": "interfaces_list",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "ulCount"
+        "name": "ulCount",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1371,19 +1609,23 @@
     "arguments": [
       {
         "type": "unsigned char *",
-        "name": "interface_name"
+        "name": "interface_name",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_VERSION_PTR",
-        "name": "version"
+        "name": "version",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_INTERFACE_PTR_PTR",
-        "name": "interface"
+        "name": "interface",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_FLAGS",
-        "name": "flags"
+        "name": "flags",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1393,27 +1635,33 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_USER_TYPE",
-        "name": "user_type"
+        "name": "user_type",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "pin"
+        "name": "pin",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "pin_len"
+        "name": "pin_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "username"
+        "name": "username",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "username_len"
+        "name": "username_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1423,11 +1671,13 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_FLAGS",
-        "name": "flags"
+        "name": "flags",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1437,15 +1687,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1455,39 +1708,48 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pParameter"
+        "name": "pParameter",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulParameterLen"
+        "name": "ulParameterLen",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "associated_data"
+        "name": "associated_data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "associated_data_len"
+        "name": "associated_data_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "plaintext"
+        "name": "plaintext",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "plaintext_len"
+        "name": "plaintext_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "ciphertext"
+        "name": "ciphertext",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "ciphertext_len"
+        "name": "ciphertext_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1497,23 +1759,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pParameter"
+        "name": "pParameter",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulParameterLen"
+        "name": "ulParameterLen",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "associated_data"
+        "name": "associated_data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "associated_data_len"
+        "name": "associated_data_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1523,35 +1790,43 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pParameter"
+        "name": "pParameter",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulParameterLen"
+        "name": "ulParameterLen",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "plaintext_part"
+        "name": "plaintext_part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "plaintext_part_len"
+        "name": "plaintext_part_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "ciphertext_part"
+        "name": "ciphertext_part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "ciphertext_part_len"
+        "name": "ciphertext_part_len",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_FLAGS",
-        "name": "flags"
+        "name": "flags",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1561,7 +1836,8 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1571,15 +1847,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1589,39 +1868,48 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pParameter"
+        "name": "pParameter",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulParameterLen"
+        "name": "ulParameterLen",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "associated_data"
+        "name": "associated_data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "associated_data_len"
+        "name": "associated_data_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "ciphertext"
+        "name": "ciphertext",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ciphertext_len"
+        "name": "ciphertext_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "plaintext"
+        "name": "plaintext",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "plaintext_len"
+        "name": "plaintext_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1631,23 +1919,28 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pParameter"
+        "name": "pParameter",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulParameterLen"
+        "name": "ulParameterLen",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "associated_data"
+        "name": "associated_data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "associated_data_len"
+        "name": "associated_data_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1657,35 +1950,43 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pParameter"
+        "name": "pParameter",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulParameterLen"
+        "name": "ulParameterLen",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "ciphertext_part"
+        "name": "ciphertext_part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ciphertext_part_len"
+        "name": "ciphertext_part_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "plaintext_part"
+        "name": "plaintext_part",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "plaintext_part_len"
+        "name": "plaintext_part_len",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_FLAGS",
-        "name": "flags"
+        "name": "flags",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1695,7 +1996,8 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1705,15 +2007,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1723,31 +2028,38 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pParameter"
+        "name": "pParameter",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulParameterLen"
+        "name": "ulParameterLen",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "data"
+        "name": "data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "data_len"
+        "name": "data_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "signature"
+        "name": "signature",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "signature_len"
+        "name": "signature_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1757,15 +2069,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pParameter"
+        "name": "pParameter",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulParameterLen"
+        "name": "ulParameterLen",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1775,31 +2090,38 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pParameter"
+        "name": "pParameter",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulParameterLen"
+        "name": "ulParameterLen",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "data"
+        "name": "data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "data_len"
+        "name": "data_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "signature"
+        "name": "signature",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int *",
-        "name": "signature_len"
+        "name": "signature_len",
+        "ffi-type": "pointer"
       }
     ]
   },
@@ -1809,7 +2131,8 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1819,15 +2142,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_MECHANISM_PTR",
-        "name": "mechanism"
+        "name": "mechanism",
+        "ffi-type": "pointer"
       },
       {
         "type": "CK_OBJECT_HANDLE",
-        "name": "key"
+        "name": "key",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1837,31 +2163,38 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pParameter"
+        "name": "pParameter",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulParameterLen"
+        "name": "ulParameterLen",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "data"
+        "name": "data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "data_len"
+        "name": "data_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "signature"
+        "name": "signature",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "signature_len"
+        "name": "signature_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1871,15 +2204,18 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pParameter"
+        "name": "pParameter",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulParameterLen"
+        "name": "ulParameterLen",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1889,31 +2225,38 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       },
       {
         "type": "CK_VOID_PTR",
-        "name": "pParameter"
+        "name": "pParameter",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "ulParameterLen"
+        "name": "ulParameterLen",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "data"
+        "name": "data",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "data_len"
+        "name": "data_len",
+        "ffi-type": "ulong"
       },
       {
         "type": "unsigned char *",
-        "name": "signature"
+        "name": "signature",
+        "ffi-type": "pointer"
       },
       {
         "type": "long unsigned int",
-        "name": "signature_len"
+        "name": "signature_len",
+        "ffi-type": "ulong"
       }
     ]
   },
@@ -1923,7 +2266,8 @@
     "arguments": [
       {
         "type": "CK_SESSION_HANDLE",
-        "name": "session"
+        "name": "session",
+        "ffi-type": "ulong"
       }
     ]
   }
