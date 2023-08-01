@@ -4,7 +4,7 @@
     "returns": "CK_RV",
     "arguments": [
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "init_args"
       }
     ]
@@ -14,7 +14,7 @@
     "returns": "CK_RV",
     "arguments": [
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pReserved"
       }
     ]
@@ -24,7 +24,7 @@
     "returns": "CK_RV",
     "arguments": [
       {
-        "type": "struct _CK_INFO *",
+        "type": "CK_INFO_PTR",
         "name": "info"
       }
     ]
@@ -34,7 +34,7 @@
     "returns": "CK_RV",
     "arguments": [
       {
-        "type": "struct _CK_FUNCTION_LIST * *",
+        "type": "CK_FUNCTION_LIST_PTR_PTR",
         "name": "function_list"
       }
     ]
@@ -48,7 +48,7 @@
         "name": "token_present"
       },
       {
-        "type": "CK_SLOT_ID *",
+        "type": "CK_SLOT_ID_PTR",
         "name": "slot_list"
       },
       {
@@ -66,7 +66,7 @@
         "name": "slotID"
       },
       {
-        "type": "struct _CK_SLOT_INFO *",
+        "type": "CK_SLOT_INFO_PTR",
         "name": "info"
       }
     ]
@@ -80,7 +80,7 @@
         "name": "slotID"
       },
       {
-        "type": "struct _CK_TOKEN_INFO *",
+        "type": "CK_TOKEN_INFO_PTR",
         "name": "info"
       }
     ]
@@ -94,11 +94,11 @@
         "name": "flags"
       },
       {
-        "type": "CK_SLOT_ID *",
+        "type": "CK_SLOT_ID_PTR",
         "name": "slot"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pReserved"
       }
     ]
@@ -112,7 +112,7 @@
         "name": "slotID"
       },
       {
-        "type": "CK_MECHANISM_TYPE *",
+        "type": "CK_MECHANISM_TYPE_PTR",
         "name": "mechanism_list"
       },
       {
@@ -134,7 +134,7 @@
         "name": "type"
       },
       {
-        "type": "struct _CK_MECHANISM_INFO *",
+        "type": "CK_MECHANISM_INFO_PTR",
         "name": "info"
       }
     ]
@@ -218,7 +218,7 @@
         "name": "flags"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "application"
       },
       {
@@ -226,7 +226,7 @@
         "name": "notify"
       },
       {
-        "type": "CK_SESSION_HANDLE *",
+        "type": "CK_SESSION_HANDLE_PTR",
         "name": "session"
       }
     ]
@@ -260,7 +260,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_SESSION_INFO *",
+        "type": "CK_SESSION_INFO_PTR",
         "name": "info"
       }
     ]
@@ -350,7 +350,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_ATTRIBUTE *",
+        "type": "CK_ATTRIBUTE_PTR",
         "name": "templ"
       },
       {
@@ -358,7 +358,7 @@
         "name": "ulCount"
       },
       {
-        "type": "CK_OBJECT_HANDLE *",
+        "type": "CK_OBJECT_HANDLE_PTR",
         "name": "object"
       }
     ]
@@ -376,7 +376,7 @@
         "name": "object"
       },
       {
-        "type": "struct _CK_ATTRIBUTE *",
+        "type": "CK_ATTRIBUTE_PTR",
         "name": "templ"
       },
       {
@@ -384,7 +384,7 @@
         "name": "ulCount"
       },
       {
-        "type": "CK_OBJECT_HANDLE *",
+        "type": "CK_OBJECT_HANDLE_PTR",
         "name": "new_object"
       }
     ]
@@ -434,7 +434,7 @@
         "name": "object"
       },
       {
-        "type": "struct _CK_ATTRIBUTE *",
+        "type": "CK_ATTRIBUTE_PTR",
         "name": "templ"
       },
       {
@@ -456,7 +456,7 @@
         "name": "object"
       },
       {
-        "type": "struct _CK_ATTRIBUTE *",
+        "type": "CK_ATTRIBUTE_PTR",
         "name": "templ"
       },
       {
@@ -474,7 +474,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_ATTRIBUTE *",
+        "type": "CK_ATTRIBUTE_PTR",
         "name": "templ"
       },
       {
@@ -492,7 +492,7 @@
         "name": "session"
       },
       {
-        "type": "CK_OBJECT_HANDLE *",
+        "type": "CK_OBJECT_HANDLE_PTR",
         "name": "object"
       },
       {
@@ -524,7 +524,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -612,7 +612,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -700,7 +700,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       }
     ]
@@ -790,7 +790,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -870,7 +870,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -914,7 +914,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -994,7 +994,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -1142,11 +1142,11 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
-        "type": "struct _CK_ATTRIBUTE *",
+        "type": "CK_ATTRIBUTE_PTR",
         "name": "templ"
       },
       {
@@ -1154,7 +1154,7 @@
         "name": "ulCount"
       },
       {
-        "type": "CK_OBJECT_HANDLE *",
+        "type": "CK_OBJECT_HANDLE_PTR",
         "name": "key"
       }
     ]
@@ -1168,11 +1168,11 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
-        "type": "struct _CK_ATTRIBUTE *",
+        "type": "CK_ATTRIBUTE_PTR",
         "name": "public_key_template"
       },
       {
@@ -1180,7 +1180,7 @@
         "name": "public_key_attribute_count"
       },
       {
-        "type": "struct _CK_ATTRIBUTE *",
+        "type": "CK_ATTRIBUTE_PTR",
         "name": "private_key_template"
       },
       {
@@ -1188,11 +1188,11 @@
         "name": "private_key_attribute_count"
       },
       {
-        "type": "CK_OBJECT_HANDLE *",
+        "type": "CK_OBJECT_HANDLE_PTR",
         "name": "public_key"
       },
       {
-        "type": "CK_OBJECT_HANDLE *",
+        "type": "CK_OBJECT_HANDLE_PTR",
         "name": "private_key"
       }
     ]
@@ -1206,7 +1206,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -1236,7 +1236,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -1252,7 +1252,7 @@
         "name": "wrapped_key_len"
       },
       {
-        "type": "struct _CK_ATTRIBUTE *",
+        "type": "CK_ATTRIBUTE_PTR",
         "name": "templ"
       },
       {
@@ -1260,7 +1260,7 @@
         "name": "attribute_count"
       },
       {
-        "type": "CK_OBJECT_HANDLE *",
+        "type": "CK_OBJECT_HANDLE_PTR",
         "name": "key"
       }
     ]
@@ -1274,7 +1274,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -1282,7 +1282,7 @@
         "name": "base_key"
       },
       {
-        "type": "struct _CK_ATTRIBUTE *",
+        "type": "CK_ATTRIBUTE_PTR",
         "name": "templ"
       },
       {
@@ -1290,7 +1290,7 @@
         "name": "attribute_count"
       },
       {
-        "type": "CK_OBJECT_HANDLE *",
+        "type": "CK_OBJECT_HANDLE_PTR",
         "name": "key"
       }
     ]
@@ -1356,7 +1356,7 @@
     "returns": "CK_RV",
     "arguments": [
       {
-        "type": "struct CK_INTERFACE *",
+        "type": "CK_INTERFACE_PTR",
         "name": "interfaces_list"
       },
       {
@@ -1374,11 +1374,11 @@
         "name": "interface_name"
       },
       {
-        "type": "struct _CK_VERSION *",
+        "type": "CK_VERSION_PTR",
         "name": "version"
       },
       {
-        "type": "struct CK_INTERFACE * *",
+        "type": "CK_INTERFACE_PTR_PTR",
         "name": "interface"
       },
       {
@@ -1440,7 +1440,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -1458,7 +1458,7 @@
         "name": "session"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pParameter"
       },
       {
@@ -1500,7 +1500,7 @@
         "name": "session"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pParameter"
       },
       {
@@ -1526,7 +1526,7 @@
         "name": "session"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pParameter"
       },
       {
@@ -1574,7 +1574,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -1592,7 +1592,7 @@
         "name": "session"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pParameter"
       },
       {
@@ -1634,7 +1634,7 @@
         "name": "session"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pParameter"
       },
       {
@@ -1660,7 +1660,7 @@
         "name": "session"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pParameter"
       },
       {
@@ -1708,7 +1708,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -1726,7 +1726,7 @@
         "name": "session"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pParameter"
       },
       {
@@ -1760,7 +1760,7 @@
         "name": "session"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pParameter"
       },
       {
@@ -1778,7 +1778,7 @@
         "name": "session"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pParameter"
       },
       {
@@ -1822,7 +1822,7 @@
         "name": "session"
       },
       {
-        "type": "struct _CK_MECHANISM *",
+        "type": "CK_MECHANISM_PTR",
         "name": "mechanism"
       },
       {
@@ -1840,7 +1840,7 @@
         "name": "session"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pParameter"
       },
       {
@@ -1874,7 +1874,7 @@
         "name": "session"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pParameter"
       },
       {
@@ -1892,7 +1892,7 @@
         "name": "session"
       },
       {
-        "type": "void *",
+        "type": "CK_VOID_PTR",
         "name": "pParameter"
       },
       {

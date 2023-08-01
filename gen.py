@@ -9,9 +9,10 @@ import sys
 import xml.etree.ElementTree as ET
 
 class Type:
-    def __init__(self, el, types):
+    def __init__(self, el, types, aliases):
         self.el = el
         self.types = types
+        self.aliases = aliases
 
     def resolve(self):
         raise NotImplementedError
@@ -22,7 +23,11 @@ class Typedef(Type):
 
 class PointerType(Type):
     def resolve(self):
-        return f"{self.types[self.el.get('type')].resolve()} *"
+        alias = self.aliases.get(self.el.get('id'))
+        if alias is not None:
+            return alias
+        else:
+            return f"{self.types[self.el.get('type')].resolve()} *"
 
 class FundamentalType(Type):
     def resolve(self):
@@ -87,6 +92,7 @@ class AST:
     def __init__(self, root):
         self.root = root
         self.types = {}
+        self.aliases = {}
         self.functions = []
 
         for el in root.iter():
@@ -95,10 +101,13 @@ class AST:
             cls = getattr(sys.modules[__name__], el.tag)
             if cls is None:
                 continue
-            self.types[el.get("id")] = cls(el, self.types)
+            self.types[el.get("id")] = cls(el, self.types, self.aliases)
+
+        for el in root.iter("Typedef"):
+            self.aliases[el.get("type")] = el.get("name")
 
         for el in root.iter("Function"):
-            self.functions.append(Function(el, self.types))
+            self.functions.append(Function(el, self.types, self.aliases))
 
 if __name__ == "__main__":
     import argparse
