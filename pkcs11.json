@@ -1,0 +1,1930 @@
+[
+  {
+    "name": "C_Initialize",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "void *",
+        "name": "init_args"
+      }
+    ]
+  },
+  {
+    "name": "C_Finalize",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "void *",
+        "name": "pReserved"
+      }
+    ]
+  },
+  {
+    "name": "C_GetInfo",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "struct _CK_INFO *",
+        "name": "info"
+      }
+    ]
+  },
+  {
+    "name": "C_GetFunctionList",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "struct _CK_FUNCTION_LIST * *",
+        "name": "function_list"
+      }
+    ]
+  },
+  {
+    "name": "C_GetSlotList",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "unsigned char",
+        "name": "token_present"
+      },
+      {
+        "type": "CK_SLOT_ID *",
+        "name": "slot_list"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "ulCount"
+      }
+    ]
+  },
+  {
+    "name": "C_GetSlotInfo",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SLOT_ID",
+        "name": "slotID"
+      },
+      {
+        "type": "struct _CK_SLOT_INFO *",
+        "name": "info"
+      }
+    ]
+  },
+  {
+    "name": "C_GetTokenInfo",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SLOT_ID",
+        "name": "slotID"
+      },
+      {
+        "type": "struct _CK_TOKEN_INFO *",
+        "name": "info"
+      }
+    ]
+  },
+  {
+    "name": "C_WaitForSlotEvent",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_FLAGS",
+        "name": "flags"
+      },
+      {
+        "type": "CK_SLOT_ID *",
+        "name": "slot"
+      },
+      {
+        "type": "void *",
+        "name": "pReserved"
+      }
+    ]
+  },
+  {
+    "name": "C_GetMechanismList",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SLOT_ID",
+        "name": "slotID"
+      },
+      {
+        "type": "CK_MECHANISM_TYPE *",
+        "name": "mechanism_list"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "ulCount"
+      }
+    ]
+  },
+  {
+    "name": "C_GetMechanismInfo",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SLOT_ID",
+        "name": "slotID"
+      },
+      {
+        "type": "CK_MECHANISM_TYPE",
+        "name": "type"
+      },
+      {
+        "type": "struct _CK_MECHANISM_INFO *",
+        "name": "info"
+      }
+    ]
+  },
+  {
+    "name": "C_InitToken",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SLOT_ID",
+        "name": "slotID"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "pin"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "pin_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "label"
+      }
+    ]
+  },
+  {
+    "name": "C_InitPIN",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "pin"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "pin_len"
+      }
+    ]
+  },
+  {
+    "name": "C_SetPIN",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "old_pin"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "old_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "new_pin"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "new_len"
+      }
+    ]
+  },
+  {
+    "name": "C_OpenSession",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SLOT_ID",
+        "name": "slotID"
+      },
+      {
+        "type": "CK_FLAGS",
+        "name": "flags"
+      },
+      {
+        "type": "void *",
+        "name": "application"
+      },
+      {
+        "type": "CK_NOTIFY",
+        "name": "notify"
+      },
+      {
+        "type": "CK_SESSION_HANDLE *",
+        "name": "session"
+      }
+    ]
+  },
+  {
+    "name": "C_CloseSession",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      }
+    ]
+  },
+  {
+    "name": "C_CloseAllSessions",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SLOT_ID",
+        "name": "slotID"
+      }
+    ]
+  },
+  {
+    "name": "C_GetSessionInfo",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_SESSION_INFO *",
+        "name": "info"
+      }
+    ]
+  },
+  {
+    "name": "C_GetOperationState",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "operation_state"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "operation_state_len"
+      }
+    ]
+  },
+  {
+    "name": "C_SetOperationState",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "operation_state"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "operation_state_len"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "encryption_key"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "authentication_key"
+      }
+    ]
+  },
+  {
+    "name": "C_Login",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "CK_USER_TYPE",
+        "name": "user_type"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "pin"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "pin_len"
+      }
+    ]
+  },
+  {
+    "name": "C_Logout",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      }
+    ]
+  },
+  {
+    "name": "C_CreateObject",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_ATTRIBUTE *",
+        "name": "templ"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulCount"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE *",
+        "name": "object"
+      }
+    ]
+  },
+  {
+    "name": "C_CopyObject",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "object"
+      },
+      {
+        "type": "struct _CK_ATTRIBUTE *",
+        "name": "templ"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulCount"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE *",
+        "name": "new_object"
+      }
+    ]
+  },
+  {
+    "name": "C_DestroyObject",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "object"
+      }
+    ]
+  },
+  {
+    "name": "C_GetObjectSize",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "object"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "size"
+      }
+    ]
+  },
+  {
+    "name": "C_GetAttributeValue",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "object"
+      },
+      {
+        "type": "struct _CK_ATTRIBUTE *",
+        "name": "templ"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulCount"
+      }
+    ]
+  },
+  {
+    "name": "C_SetAttributeValue",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "object"
+      },
+      {
+        "type": "struct _CK_ATTRIBUTE *",
+        "name": "templ"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulCount"
+      }
+    ]
+  },
+  {
+    "name": "C_FindObjectsInit",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_ATTRIBUTE *",
+        "name": "templ"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulCount"
+      }
+    ]
+  },
+  {
+    "name": "C_FindObjects",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE *",
+        "name": "object"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "max_object_count"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "object_count"
+      }
+    ]
+  },
+  {
+    "name": "C_FindObjectsFinal",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      }
+    ]
+  },
+  {
+    "name": "C_EncryptInit",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_Encrypt",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "data_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "encrypted_data"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "encrypted_data_len"
+      }
+    ]
+  },
+  {
+    "name": "C_EncryptUpdate",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "part"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "part_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "encrypted_part"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "encrypted_part_len"
+      }
+    ]
+  },
+  {
+    "name": "C_EncryptFinal",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "last_encrypted_part"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "last_encrypted_part_len"
+      }
+    ]
+  },
+  {
+    "name": "C_DecryptInit",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_Decrypt",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "encrypted_data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "encrypted_data_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "data"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "data_len"
+      }
+    ]
+  },
+  {
+    "name": "C_DecryptUpdate",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "encrypted_part"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "encrypted_part_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "part"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "part_len"
+      }
+    ]
+  },
+  {
+    "name": "C_DecryptFinal",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "last_part"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "last_part_len"
+      }
+    ]
+  },
+  {
+    "name": "C_DigestInit",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      }
+    ]
+  },
+  {
+    "name": "C_Digest",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "data_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "digest"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "digest_len"
+      }
+    ]
+  },
+  {
+    "name": "C_DigestUpdate",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "part"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "part_len"
+      }
+    ]
+  },
+  {
+    "name": "C_DigestKey",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_DigestFinal",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "digest"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "digest_len"
+      }
+    ]
+  },
+  {
+    "name": "C_SignInit",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_Sign",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "data_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "signature"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "signature_len"
+      }
+    ]
+  },
+  {
+    "name": "C_SignUpdate",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "part"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "part_len"
+      }
+    ]
+  },
+  {
+    "name": "C_SignFinal",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "signature"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "signature_len"
+      }
+    ]
+  },
+  {
+    "name": "C_SignRecoverInit",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_SignRecover",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "data_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "signature"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "signature_len"
+      }
+    ]
+  },
+  {
+    "name": "C_VerifyInit",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_Verify",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "data_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "signature"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "signature_len"
+      }
+    ]
+  },
+  {
+    "name": "C_VerifyUpdate",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "part"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "part_len"
+      }
+    ]
+  },
+  {
+    "name": "C_VerifyFinal",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "signature"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "signature_len"
+      }
+    ]
+  },
+  {
+    "name": "C_VerifyRecoverInit",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_VerifyRecover",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "signature"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "signature_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "data"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "data_len"
+      }
+    ]
+  },
+  {
+    "name": "C_DigestEncryptUpdate",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "part"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "part_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "encrypted_part"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "encrypted_part_len"
+      }
+    ]
+  },
+  {
+    "name": "C_DecryptDigestUpdate",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "encrypted_part"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "encrypted_part_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "part"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "part_len"
+      }
+    ]
+  },
+  {
+    "name": "C_SignEncryptUpdate",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "part"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "part_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "encrypted_part"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "encrypted_part_len"
+      }
+    ]
+  },
+  {
+    "name": "C_DecryptVerifyUpdate",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "encrypted_part"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "encrypted_part_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "part"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "part_len"
+      }
+    ]
+  },
+  {
+    "name": "C_GenerateKey",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "struct _CK_ATTRIBUTE *",
+        "name": "templ"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulCount"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE *",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_GenerateKeyPair",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "struct _CK_ATTRIBUTE *",
+        "name": "public_key_template"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "public_key_attribute_count"
+      },
+      {
+        "type": "struct _CK_ATTRIBUTE *",
+        "name": "private_key_template"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "private_key_attribute_count"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE *",
+        "name": "public_key"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE *",
+        "name": "private_key"
+      }
+    ]
+  },
+  {
+    "name": "C_WrapKey",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "wrapping_key"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "key"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "wrapped_key"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "wrapped_key_len"
+      }
+    ]
+  },
+  {
+    "name": "C_UnwrapKey",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "unwrapping_key"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "wrapped_key"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "wrapped_key_len"
+      },
+      {
+        "type": "struct _CK_ATTRIBUTE *",
+        "name": "templ"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "attribute_count"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE *",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_DeriveKey",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "base_key"
+      },
+      {
+        "type": "struct _CK_ATTRIBUTE *",
+        "name": "templ"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "attribute_count"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE *",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_SeedRandom",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "seed"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "seed_len"
+      }
+    ]
+  },
+  {
+    "name": "C_GenerateRandom",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "random_data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "random_len"
+      }
+    ]
+  },
+  {
+    "name": "C_GetFunctionStatus",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      }
+    ]
+  },
+  {
+    "name": "C_CancelFunction",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      }
+    ]
+  },
+  {
+    "name": "C_GetInterfaceList",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "struct CK_INTERFACE *",
+        "name": "interfaces_list"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "ulCount"
+      }
+    ]
+  },
+  {
+    "name": "C_GetInterface",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "unsigned char *",
+        "name": "interface_name"
+      },
+      {
+        "type": "struct _CK_VERSION *",
+        "name": "version"
+      },
+      {
+        "type": "struct CK_INTERFACE * *",
+        "name": "interface"
+      },
+      {
+        "type": "CK_FLAGS",
+        "name": "flags"
+      }
+    ]
+  },
+  {
+    "name": "C_LoginUser",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "CK_USER_TYPE",
+        "name": "user_type"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "pin"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "pin_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "username"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "username_len"
+      }
+    ]
+  },
+  {
+    "name": "C_SessionCancel",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "CK_FLAGS",
+        "name": "flags"
+      }
+    ]
+  },
+  {
+    "name": "C_MessageEncryptInit",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_EncryptMessage",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "void *",
+        "name": "pParameter"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulParameterLen"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "associated_data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "associated_data_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "plaintext"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "plaintext_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "ciphertext"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "ciphertext_len"
+      }
+    ]
+  },
+  {
+    "name": "C_EncryptMessageBegin",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "void *",
+        "name": "pParameter"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulParameterLen"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "associated_data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "associated_data_len"
+      }
+    ]
+  },
+  {
+    "name": "C_EncryptMessageNext",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "void *",
+        "name": "pParameter"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulParameterLen"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "plaintext_part"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "plaintext_part_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "ciphertext_part"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "ciphertext_part_len"
+      },
+      {
+        "type": "CK_FLAGS",
+        "name": "flags"
+      }
+    ]
+  },
+  {
+    "name": "C_MessageEncryptFinal",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      }
+    ]
+  },
+  {
+    "name": "C_MessageDecryptInit",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_DecryptMessage",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "void *",
+        "name": "pParameter"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulParameterLen"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "associated_data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "associated_data_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "ciphertext"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ciphertext_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "plaintext"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "plaintext_len"
+      }
+    ]
+  },
+  {
+    "name": "C_DecryptMessageBegin",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "void *",
+        "name": "pParameter"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulParameterLen"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "associated_data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "associated_data_len"
+      }
+    ]
+  },
+  {
+    "name": "C_DecryptMessageNext",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "void *",
+        "name": "pParameter"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulParameterLen"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "ciphertext_part"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ciphertext_part_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "plaintext_part"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "plaintext_part_len"
+      },
+      {
+        "type": "CK_FLAGS",
+        "name": "flags"
+      }
+    ]
+  },
+  {
+    "name": "C_MessageDecryptFinal",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      }
+    ]
+  },
+  {
+    "name": "C_MessageSignInit",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_SignMessage",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "void *",
+        "name": "pParameter"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulParameterLen"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "data_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "signature"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "signature_len"
+      }
+    ]
+  },
+  {
+    "name": "C_SignMessageBegin",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "void *",
+        "name": "pParameter"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulParameterLen"
+      }
+    ]
+  },
+  {
+    "name": "C_SignMessageNext",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "void *",
+        "name": "pParameter"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulParameterLen"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "data_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "signature"
+      },
+      {
+        "type": "long unsigned int *",
+        "name": "signature_len"
+      }
+    ]
+  },
+  {
+    "name": "C_MessageSignFinal",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      }
+    ]
+  },
+  {
+    "name": "C_MessageVerifyInit",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "struct _CK_MECHANISM *",
+        "name": "mechanism"
+      },
+      {
+        "type": "CK_OBJECT_HANDLE",
+        "name": "key"
+      }
+    ]
+  },
+  {
+    "name": "C_VerifyMessage",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "void *",
+        "name": "pParameter"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulParameterLen"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "data_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "signature"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "signature_len"
+      }
+    ]
+  },
+  {
+    "name": "C_VerifyMessageBegin",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "void *",
+        "name": "pParameter"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulParameterLen"
+      }
+    ]
+  },
+  {
+    "name": "C_VerifyMessageNext",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      },
+      {
+        "type": "void *",
+        "name": "pParameter"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "ulParameterLen"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "data"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "data_len"
+      },
+      {
+        "type": "unsigned char *",
+        "name": "signature"
+      },
+      {
+        "type": "long unsigned int",
+        "name": "signature_len"
+      }
+    ]
+  },
+  {
+    "name": "C_MessageVerifyFinal",
+    "returns": "CK_RV",
+    "arguments": [
+      {
+        "type": "CK_SESSION_HANDLE",
+        "name": "session"
+      }
+    ]
+  }
+]
