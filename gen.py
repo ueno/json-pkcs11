@@ -83,9 +83,14 @@ TYPES = [
 ]
 
 class Function(Type):
+    def __init__(self, el, types, aliases, version):
+        self.version = version
+        super().__init__(el, types, aliases)
+
     def to_json(self):
         obj = {}
         obj["name"] = self.el.get("name")
+        obj["version"] = self.version
         returns = self.el.get("returns")
         obj["returns"] = self.types[returns].resolve()
         obj["arguments"] = []
@@ -122,8 +127,11 @@ class AST:
         for el in root.iter("Typedef"):
             self.aliases[el.get("type")] = el.get("name")
 
+        version = 2
         for el in root.iter("Function"):
-            self.functions.append(Function(el, self.types, self.aliases))
+            if el.get("name") == "C_GetInterfaceList":
+                version = 3
+            self.functions.append(Function(el, self.types, self.aliases, version))
 
 if __name__ == "__main__":
     import argparse
